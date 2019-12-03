@@ -4,7 +4,7 @@ import "./App.css";
 import axios from "axios";
 
 import MyCard from "./components/MyCard";
-// import Followers from "./components/Followers";
+import Followers from "./components/Followers";
 
 class App extends React.Component {
   constructor() {
@@ -28,7 +28,7 @@ class App extends React.Component {
   componentDidMount() {
     this.fetchUser("chelsabeth")
     axios
-    .get("https://api.github.com/chelsabeth/followers")
+    .get("https://api.github.com/users/chelsabeth/followers")
     .then(res => {
       this.setState({
         followers: res.data})
@@ -40,7 +40,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Github UserCard App</h1>
-        <MyCard data={this.state.myCard}/>
+        <MyCard mine={this.state.myCard}/>
+        <Followers followers={this.state.followers}/>
       </div>
     );
   }
