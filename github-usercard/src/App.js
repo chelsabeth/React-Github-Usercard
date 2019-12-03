@@ -3,6 +3,8 @@ import "./App.css";
 
 import axios from "axios";
 
+import MyCard from "./components/MyCard";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -37,6 +39,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Github UserCard App</h1>
+        <MyCard data={this.state.myCard}/>
       </div>
     );
   }
