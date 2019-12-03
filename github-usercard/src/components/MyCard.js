@@ -7,9 +7,9 @@ function MyCard(props) {
   }, [data]);
 
   return (
-    <div>
+    <div className="mycard-container">
       <div key={data.id} className="my-card"></div>
-      <img className="profile-pic"src={data.avatar_url} alt="profile avatar"></img>
+      <img src={data.avatar_url} alt="my avatar"></img>
       <h2>Username: {data.name}</h2>
     </div>
   );

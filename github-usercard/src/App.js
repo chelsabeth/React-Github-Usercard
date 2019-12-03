@@ -4,6 +4,7 @@ import "./App.css";
 import axios from "axios";
 
 import MyCard from "./components/MyCard";
+// import Followers from "./components/Followers";
 
 class App extends React.Component {
   constructor() {
